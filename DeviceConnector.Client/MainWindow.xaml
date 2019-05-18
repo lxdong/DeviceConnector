@@ -1,0 +1,31 @@
+﻿<metro:MetroWindow x:Class="DeviceConnector.Client.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                      Title="MainWindow"
+                      Height="480"
+                      Width="900"
+                      WindowStartupLocation="CenterScreen"
+                   >
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="80"></Setter>
+                <Setter Property="Height" Value="35"></Setter>
+                <Setter Property="Margin" Value="5,0"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Command="{Binding InitCommand}" CommandParameter="Init">初始化</Button>
+            <Button Command="{Binding InstallCommand}" CommandParameter="Install">安装服务</Button>
+            <Button Command="{Binding UnistallCommand}" CommandParameter="Unistall">卸载服务</Button>
+            <Button Command="{Binding StartCommand}" CommandParameter="Start">启动服务</Button>
+            <Button Command="{Binding StopCommand}" CommandParameter="Stop">停止服务</Button>
+        </WrapPanel>
+    </Grid>
+</metro:MetroWindow>
