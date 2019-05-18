@@ -26,6 +26,10 @@ namespace DeviceConnector.Client
             UnistallCommand = new DelegateCommands<string>(Unistall);
             StartCommand = new DelegateCommands<string>(Start);
             StopCommand = new DelegateCommands<string>(Stop);
+
+            IsInit = false;
+            IsInstall = false;
+            IsStart = false;
         }
 
         #region Comamnds
