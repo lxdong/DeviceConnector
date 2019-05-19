@@ -16,10 +16,10 @@ namespace DeviceConnector.Core
 {
     public interface IMessageBus
     {
-        void Init();
-        void Connect();
-        void Disconnect();
-        void Receive();
-        void Send();
+        //void Init();
+        //void Connect();
+        //void Disconnect();
+        //void Receive();
+        //void Send();
     }
 }

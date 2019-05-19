@@ -8,6 +8,7 @@ using System.Net;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using Unity;
 
 namespace DeviceConnector.Service
 {
@@ -19,6 +20,14 @@ namespace DeviceConnector.Service
         public DeviceConnector()
         {
             InitializeComponent();
+            InitIoC();
+        }
+
+        private void InitIoC()
+        {
+            IUnityContainer container = new UnityContainer();
+
+            
         }
 
         protected override void OnStart(string[] args)
